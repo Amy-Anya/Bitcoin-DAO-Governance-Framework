@@ -271,3 +271,19 @@
     update-cooldown: u1440 
   }
 )
+
+;; Initial Configuration for Contract Owner
+(map-set voter-profiles 
+  { voter: CONTRACT_OWNER }
+  {
+    base-voting-power: u10000,
+    delegated-voting-power: u0,
+    delegated-to: none,
+    total-delegated-from: (list),
+    last-voting-block: u0,
+    reputation-score: u100,
+    slashing-points: u0,
+    vote-history: (list),
+    specialized-voting-weights: (list)
+  }
+)
